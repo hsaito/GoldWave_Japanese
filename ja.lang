@@ -3415,7 +3415,7 @@
             }
         },
         "EvaluatorForm": {
-            "Caption": "数式計算",
+            "Caption": "数式計算機",
             "DestinationBox": {
                 "Caption": "保存先 "
             },
@@ -6640,7 +6640,7 @@
                     "ToolCaption": "チェーン"
                 },
                 "ToolExpressionEvaluator": {
-                    "Caption": "数式エバリュエーター...",
+                    "Caption": "数式計算機...",
                     "Hint": "数学的波形と式を計算します",
                     "ToolCaption": "数式"
                 },
