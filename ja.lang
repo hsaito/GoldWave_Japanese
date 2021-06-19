@@ -451,7 +451,7 @@
                         "Caption": "マスターコントロール："
                     },
                     "VolumeMasterSelect": {
-                        "Caption": "すべてミュート"
+                        "Caption": "すべて消音"
                     },
                     "VolumeMasterBar": {
                         "Caption": "マスター音量"
@@ -636,12 +636,12 @@
                             "Caption": "テスト"
                         },
                         "DevicePlayChannelsLabel": {
-                            "Caption": "ミュート："
+                            "Caption": "消音："
                         },
                         "DevicePlayChannels": {
-                            "Text": "未選択をミュート",
+                            "Text": "未選択を消音",
                             "Items.Strings": [
-                                "未選択をミュート",
+                                "未選択を消音",
                                 "未選択を再生",
                                 "ステレオでソロ再生"
                             ]
@@ -2026,7 +2026,7 @@
                         }
                     },
                     "TrimSilence": {
-                        "Caption": "無音部分を切り抜き",
+                        "Caption": "無音部分を削除",
                         "TrimMode": {
                             "Caption": "切り抜き",
                             "Items.Strings": [
@@ -3415,7 +3415,7 @@
             }
         },
         "EvaluatorForm": {
-            "Caption": "数式評価",
+            "Caption": "数式計算",
             "DestinationBox": {
                 "Caption": "保存先 "
             },
@@ -3488,7 +3488,7 @@
                 },
                 "ShowButtonsAction": {
                     "Caption": "ボタン",
-                    "Hint": "評価ボタンを表示する"
+                    "Hint": "計算ボタンを表示する"
                 }
             }
         },
@@ -3594,7 +3594,7 @@
                 }
             },
             "Instructions": {
-                "Caption": "各フットペダルをアサインするには、以下のボタンの1つを選択してから、インジケータが緑色に変わるまでその機能に使用するペダルを（1秒間）押し続けます。"
+                "Caption": "各フットペダルを割り当てるには、以下のボタンの1つを選択してから、インジケータが緑色に変わるまでその機能に使用するペダルを（1秒間）押し続けます。"
             },
             "Record": {
                 "Button": {
@@ -5029,7 +5029,7 @@
             }
         },
         "TrimSilenceForm": {
-            "Caption": "無音部分を切り抜き",
+            "Caption": "無音部分を削除",
             "Volume": {
                 "Caption": "しきい値（dB）："
             },
@@ -6147,7 +6147,7 @@
                 "EditTrimSilence": {
                     "Caption": "無音...",
                     "Hint": "選択範囲内の前後の無音部分を削除します",
-                    "ToolCaption": "無音切り抜き"
+                    "ToolCaption": "無音削除"
                 },
                 "EditBlend": {
                     "Caption": "マーカーでブレンド",
@@ -7523,7 +7523,7 @@
         "sUndoOverwrite": "上書き",
         "sUndoReplace": "置き換え",
         "sUndoTrim": "切り抜き",
-        "sUndoTrimSilence": "無音部分を切り抜き",
+        "sUndoTrimSilence": "無音部分を削除",
         "sUndoMix": "ミックス",
         "sUndoCrossfade": "クロスフェード",
         "sUndoSilence": "無音を挿入",
@@ -7587,7 +7587,7 @@
         "sControlAutoSaveNotNow": "自動保存しない",
         "sControlAutoSaveContinue": "終了したら自動的に録音を保存しますか？|「自動保存」録画設定が有効になります。|[自動保存]設定を変更するには、[コントロールプロパティレコード]タブを使用します。",
         "sControlAutoSavePowerDown": "記録後にコンピューターの電源を切りますか？ || [システムの電源を切る]設定を変更するには、[コントロールプロパティレコード]タブを使用します。",
-        "sControlAutoSaveShutdown": "自動保存後、GoldWaveはシャットダウンします。",
+        "sControlAutoSaveShutdown": "自動保存後、GoldWaveは終了します。",
         "sControlPlaybackProblems": "一般的な再生の問題と解決策のリスト。",
         "sControlRecordingProblems": "一般的な録音の問題と解決策のリスト。",
         "sControlStateStop": "停止",
@@ -7913,7 +7913,7 @@
             "上書きする",
             "削除する",
             "トリム",
-            "ミュート",
+            "消音",
             "混合",
             "無音を挿入",
             "交換する",
@@ -8025,7 +8025,7 @@
         "sCDDataTrack": "データトラック",
         "sCDTrack": "トラック",
         "sCDEnterHex": "有効な8桁の16進数を入力してください。",
-        "sEvaluationUndo": "評価",
+        "sEvaluationUndo": "計算",
         "sEvalError": [
             "終了しました。",
             "構文エラー。",
