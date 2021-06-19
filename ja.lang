@@ -2617,7 +2617,7 @@
                 }
             },
             "MinimizeButton": {
-                "Hint": "ウインドウを最小化する"
+                "Hint": "ウィンドウを最小化する"
             },
             "OverallPanel": {
                 "ProgressLabel": {
@@ -2626,7 +2626,7 @@
             },
             "ActionList": {
                 "Minimize": {
-                    "Hint": "ウインドウを最小化"
+                    "Hint": "ウィンドウを最小化"
                 }
             }
         },
@@ -5288,7 +5288,7 @@
                 }
             },
             "SoundWindow": {
-                "Caption": " 音声ウインドウのレイアウト ",
+                "Caption": " 音声ウィンドウのレイアウト ",
                 "Items.Strings": [
                     "重ね合わせ",
                     "最大化",
@@ -5862,8 +5862,8 @@
                     }
                 },
                 "MDIWindowMenu": {
-                    "Caption": "ウインドウ",
-                    "Hint": "ウインドウ関連コマンド"
+                    "Caption": "ウィンドウ",
+                    "Hint": "ウィンドウ関連コマンド"
                 },
                 "HelpMenu": {
                     "Caption": "ヘルプ",
@@ -6181,7 +6181,7 @@
                 },
                 "EditChannelSelect": {
                     "Caption": "チャンネルを選択...",
-                    "Hint": "チャンネル選択ウインドウを表示する",
+                    "Hint": "チャンネル選択ウィンドウを表示する",
                     "ToolCaption": "チャンネル"
                 },
                 "EditChannelAll": {
@@ -6691,9 +6691,9 @@
                     "ToolCaption": "バー"
                 },
                 "OptionWindow": {
-                    "Caption": "ウインドウ...",
-                    "Hint": "ウインドウと波形に関するオプションを設定します",
-                    "ToolCaption": "ウインドウ"
+                    "Caption": "ウィンドウ...",
+                    "Hint": "ウィンドウと波形に関するオプションを設定します",
+                    "ToolCaption": "ウィンドウ"
                 },
                 "WindowCascade": {
                     "Caption": "重ね合わせ",
@@ -7696,7 +7696,7 @@
         "sSaveTypeBad": "ファイルを元の形式で保存することはできません。 別の種類で保存してください。",
         "sNotSaved": "変更を「%0%」に保存しますか？",
         "sQuickVisualLimit": "選択できるのは%0%項目のみです。",
-        "sSaveUpdateFormat": "ファイルは変換され保存されました。 音声ウインドウを新しいフォーマットで更新しますか？",
+        "sSaveUpdateFormat": "ファイルは変換され保存されました。 音声ウィンドウを新しいフォーマットで更新しますか？",
         "sFormatNotVariableRate": "ファイルの現在の属性は、選択されたサンプリングレートと一致しません。|新しいレートを保持するには、[ファイル]メニューの[名前を付けて保存]を使用して、新しいレートを持つさまざまな属性でファイルを保存する必要があります。",
         "seeNone": "",
         "seeCreate": "エフェクトを作成することができません。",
