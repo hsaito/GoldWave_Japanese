@@ -2717,7 +2717,7 @@
                         "Caption": "すべて選択解除"
                     },
                     "SaveTracks": {
-                        "Caption": "トラックを保存…"
+                        "Caption": "トラックを保存..."
                     },
                     "GetTitles": {
                         "Hint": "インターネットからダウンロードした曲のタイトルをダウンロードする",
@@ -2758,7 +2758,7 @@
                         "Caption": "00：00：00.000s（0 MB） "
                     },
                     "SaveRange": {
-                        "Caption": "範囲を保存…"
+                        "Caption": "範囲を保存..."
                     },
                     "From": {
                         "Label": "開始",
@@ -3179,7 +3179,7 @@
                 }
             },
             "NewButton": {
-                "Caption": "新規…"
+                "Caption": "新規..."
             },
             "DeleteButton": {
                 "Caption": "削除"
@@ -3197,7 +3197,7 @@
                 "Caption": "全てコピー"
             },
             "SplitButton": {
-                "Caption": "ファイルを分割…"
+                "Caption": "ファイルを分割..."
             },
             "CullButton": {
                 "Caption": "間引き"
