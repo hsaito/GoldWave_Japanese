@@ -1271,11 +1271,11 @@
                 "Caption": "右サイド："
             },
             "Scan": {
-                "Caption": "スキャンオフセット"
+                "Caption": "オフセットをスキャン"
             },
             "ScanActionList": {
                 "ScanAction": {
-                    "Caption": "スキャンオフセット",
+                    "Caption": "オフセットをスキャン",
                     "Hint": "逆オフセットを取得するために選択範囲をスキャンします"
                 }
             }
