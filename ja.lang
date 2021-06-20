@@ -541,14 +541,14 @@
                     "VisualSettings": {
                         "Caption": " ビジュアルFFT設定 ",
                         "FFTWindowLabel": {
-                            "Caption": "FFTウィンドウ"
+                            "Caption": "FFT窓関数"
                         },
                         "VisualFFTWindowBox": {
                             "Text": "Kaiser 7",
                             "Items.Strings": [
                                 "無し",
                                 "ハミング",
-                                "トライアングル",
+                                "三角関数",
                                 "Kaiser 7"
                             ]
                         },
@@ -5377,8 +5377,8 @@
                 "Rate": {
                     "Text": "352800 Hz",
                     "Items.Strings": [
-                        "すべての料金",
-                        "任意の料金",
+                        "すべてのレート",
+                        "任意のレート",
                         "5500 Hz",
                         "6000 Hz",
                         "7333 Hz",
