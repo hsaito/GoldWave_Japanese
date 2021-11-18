@@ -4514,8 +4514,8 @@
         },
         "ReminderForm": {
             "Caption": "GoldWave評価版の通知",
-            "Purchase": {
-                "Caption": "オンラインで購入する"
+            "Extension": {
+                "Caption": "無料の試用ライセンス"
             },
             "Help": {
                 "Caption": "ヘルプ"
@@ -4526,6 +4526,9 @@
             "Continue": {
                 "Hint": "続ける",
                 "Caption": "続ける"
+            },
+            "Purchase": {
+                "Caption": "オンラインで購入する"
             }
         },
         "SetPlaybackForm": {
@@ -4694,6 +4697,10 @@
         },
         "SpeechForm": {
             "Caption": "音声変換",
+            "MenuButton": {
+                "Hint": "コマンドメニュー",
+                "Caption": "☰"
+            },
             "ButtonCancel": {
                 "Caption": "閉じる"
             },
@@ -7255,6 +7262,19 @@
                 "Caption": "減衰時間"
             }
         },
+        "ChannelSeparationPage": {
+            "Caption": "チャンネル分離",
+            "AxisScale": {
+                "Caption": "X スケール",
+                "Items.Strings": [
+                    "線形",
+                    "対数"
+                ]
+            },
+            "SlowFade": {
+                "Caption": "低速に増大するフェーディング"
+            }
+        },
         "SpectrogramPage": {
             "Caption": "スペクトログラム",
             "Gray": {
@@ -7343,6 +7363,9 @@
             "Alpha": {
                 "Label": "アルファ",
                 "Caption": "0.990"
+            },
+            "AlphaLabel": {
+                "Caption": "アルファ:"
             }
         },
         "StaffPage": {
@@ -8077,7 +8100,7 @@
         "sISDNALaw": "ISDN A-Law",
         "sIEEEFloat": "IEEE浮動小数点",
         "sPCM": "PCM",
-        "sOldPCM": "（廃止）PCM",
+        "sOldPCM": "（古い形式） PCM",
         "sADPCM": "ADPCM",
         "sASCIIF": "ASCII浮動小数点",
         "sASCIII": "ASCII 16ビット整数",
@@ -8199,7 +8222,8 @@
         "Waterfall": "ウォーターフォール",
         "Waveform": "波形",
         "X-Y Graph": "XYグラフ",
-        "LED Time": "LED時間表示"
+        "LED Time": "LED時間表示",
+        "Channel Separation": "チャンネル分離"
     },
     "Audio": {
         "Wave": "Wave",
