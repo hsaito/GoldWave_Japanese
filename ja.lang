@@ -3,7 +3,7 @@
         "ISO Code": "ja",
         "Display Name": "日本語",
         "Date": "2021-06-20",
-        "Copyright": "日本語テキスト ©2019 GoldWave Inc.無断複写・転載を禁じます。",
+        "Copyright": "日本語テキスト ©2021 GoldWave Inc.無断複写・転載を禁じます。",
         "Revision": "オリジナル https://github.com/hsaito/GoldWave_Japanese"
     },
     "Forms": {
@@ -107,6 +107,10 @@
             "VisualPopup": {
                 "VisualPopupProperties": {
                     "Caption": "プロパティ..."
+                },
+                "VisualPopupConfiguration": {
+                    "Caption": "設定…",
+                    "Hint": "ビジュアルを設定する。"
                 }
             },
             "SpeedPopup": {
@@ -141,60 +145,6 @@
                 },
                 "BalancePopupRight": {
                     "Caption": "右（+ 100％）"
-                }
-            },
-            "ControlActions": {
-                "ControlPlay1": {
-                    "Caption": "プレイ1",
-                    "Hint": "ボタン1の設定を使って再生"
-                },
-                "ControlPlay2": {
-                    "Caption": "プレイ2",
-                    "Hint": "ボタン2の設定で再生"
-                },
-                "ControlPlay3": {
-                    "Caption": "プレイ3",
-                    "Hint": "ボタン3の設定を使って再生"
-                },
-                "ControlRewind": {
-                    "Caption": "巻き戻し",
-                    "Hint": "再生しながら巻き戻します"
-                },
-                "ControlFastForward": {
-                    "Caption": "早送り",
-                    "Hint": "再生しながら早送りします"
-                },
-                "ControlPause": {
-                    "Caption": "一時停止",
-                    "Hint": "再生を一時停止します"
-                },
-                "ControlStop": {
-                    "Caption": "停止",
-                    "Hint": "再生を停止します"
-                },
-                "ControlRecordNew": {
-                    "Caption": "新規録音",
-                    "Hint": "新しいファイルを作成して録音を開始します"
-                },
-                "ControlRecordSelection": {
-                    "Caption": "選択部分で録音",
-                    "Hint": "現在の選択範囲で録音を開始します"
-                },
-                "ControlPauseRecord": {
-                    "Caption": "録音一時停止",
-                    "Hint": "録音を一時停止または一時停止解除します"
-                },
-                "ControlStopRecord": {
-                    "Caption": "録音停止",
-                    "Hint": "記録を停止します"
-                },
-                "ControlSetup": {
-                    "Caption": "設定",
-                    "Hint": "コントロールプロパティを設定します"
-                },
-                "ControlUndock": {
-                    "Caption": "ドック解除",
-                    "Hint": "コントロールウィンドウを表示します"
                 }
             }
         },
@@ -314,6 +264,25 @@
                                 "キーボードを使用して移動したときのプレビューマーカー",
                                 "キーボードまたはマウスを使用して移動したときのプレビューマーカー"
                             ]
+                        }
+                    },
+                    "GroupSkip": {
+                        "Caption": "スキップ",
+                        "SkipForward": {
+                            "Hint": "早送りするスキップの時間を設定",
+                            "Label": "早送り",
+                            "Caption": "1"
+                        },
+                        "ForwardLabel": {
+                            "Caption": "早送り(&W)"
+                        },
+                        "SkipBackward": {
+                            "Hint": "巻き戻しの時間を設定",
+                            "Label": "巻き戻し",
+                            "Caption": "1"
+                        },
+                        "BackLabel": {
+                            "Caption": "巻き戻し(&B)"
                         }
                     }
                 },
@@ -552,11 +521,24 @@
                                 "Kaiser 7"
                             ]
                         },
-                        "VisualFFTSize": {
-                            "Caption": "FFTサイズ："
-                        },
                         "VisualMinimumdB": {
                             "Caption": "最小dB："
+                        },
+                        "VisualFFTSizePrompt": {
+                            "Caption": "FFTサイズ"
+                        },
+                        "VisualFFTSize": {
+                            "Items.Strings": [
+                                "9",
+                                "10",
+                                "11",
+                                "12",
+                                "13",
+                                "14",
+                                "15",
+                                "16",
+                                "自動"
+                            ]
                         }
                     }
                 },
@@ -1161,6 +1143,53 @@
                 "Caption": "周波数（Hz）："
             }
         },
+        "MultibandEffectForm": {
+            "TimeFader": {
+                "Caption": "時間"
+            },
+            "TimeLabel": {
+                "Caption": "スペクトル時間:"
+            },
+            "Time": {
+                "Label": "時間インデックス",
+                "Caption": "00:00:00.00000"
+            },
+            "Low": {
+                "Caption": "バンド2 (Hz):"
+            },
+            "Medium": {
+                "Caption": "バンド3 (Hz):"
+            },
+            "High": {
+                "Caption": "バンド 4 (Hz):"
+            },
+            "MultiBand1": {
+                "Title": {
+                    "Caption": "バンド1"
+                }
+            },
+            "MultiBand2": {
+                "Title": {
+                    "Caption": "バンド2"
+                }
+            },
+            "MultiBand3": {
+                "Title": {
+                    "Caption": "バンド3"
+                }
+            },
+            "MultiBand4": {
+                "Title": {
+                    "Caption": "バンド4"
+                }
+            },
+            "Independent": {
+                "Caption": "チャンネルを独立して処理"
+            },
+            "Sync": {
+                "Caption": "値の変更を同期"
+            }
+        },
         "MultichannelMixForm": {
             "Caption": "チャンネルミックス"
         },
@@ -1242,6 +1271,14 @@
             },
             "TimeLabel": {
                 "Caption": "時間："
+            },
+            "PointPanel": {
+                "LabelX": {
+                    "Caption": "&X (Hz):"
+                },
+                "LabelY": {
+                    "Caption": "&Y (dB):"
+                }
             }
         },
         "OffsetForm": {
@@ -1566,7 +1603,8 @@
                         "-75",
                         "-100",
                         "-120",
-                        "-160"
+                        "-160",
+                        "-200"
                     ],
                     "Text": "-100"
                 }
@@ -1593,6 +1631,12 @@
                 }
             },
             "PointPanel": {
+                "LabelX": {
+                    "Caption": "&X (Hz):"
+                },
+                "LabelY": {
+                    "Caption": "&Y (dB):"
+                },
                 "Time": {
                     "Label": "時間インデックス",
                     "Caption": "00:00:00.00000"
@@ -1696,6 +1740,15 @@
                 "Time": {
                     "Label": "長さ",
                     "Caption": "50.0000"
+                },
+                "ByTempo": {
+                    "Caption": "テンポ (BPM):"
+                },
+                "TempoFrom": {
+                    "Caption": "下限:"
+                },
+                "TempoTo": {
+                    "Caption": "上限:"
                 }
             },
             "AlgorithmGroup": {
@@ -1983,6 +2036,9 @@
                                 "選択を2秒縮小する",
                                 "「開始」と「終了」という名前のキュー間を選択"
                             ]
+                        },
+                        "Snap": {
+                            "Caption": "ゼロクロッシングにスナップする (時間とパーセントのみ)"
                         }
                     },
                     "Silence": {
@@ -2098,10 +2154,15 @@
                                 "88200",
                                 "96000",
                                 "192000",
-                                "352800"
+                                "352800",
+                                "384000",
+                                "768000"
                             ],
                             "Text": "44100"
                         }
+                    },
+                    "BlendAtMarker": {
+                        "Caption": "マーカーでブレンド"
                     }
                 }
             },
@@ -2494,7 +2555,9 @@
                                 "88200",
                                 "96000",
                                 "192000",
-                                "352800"
+                                "352800",
+                                "384000",
+                                "768000"
                             ],
                             "Text": "44100"
                         },
@@ -2630,32 +2693,11 @@
                 }
             }
         },
+        "BeatDetectionForm": {
+            "Caption": "ビート検出"
+        },
         "BlendForm": {
-            "Caption": "マーカーでブレンド",
-            "Duration": {
-                "Caption": "ブレンドの持続時間（秒）："
-            },
-            "MarkerLabel": {
-                "Caption": "マーカー："
-            },
-            "Markers": {
-                "Text": "開始マーカー「{」",
-                "Items.Strings": [
-                    "開始{マーカー",
-                    "終了}マーカー",
-                    "両方のマーカー"
-                ]
-            },
-            "TypeLabel": {
-                "Caption": "フェードカーブ："
-            },
-            "FadeCurve": {
-                "Text": "同等のパワー",
-                "Items.Strings": [
-                    "線的",
-                    "同等のパワー"
-                ]
-            }
+            "Caption": "マーカーでブレンド"
         },
         "CalculateSeparationForm": {
             "Caption": "計算",
@@ -2933,6 +2975,18 @@
                 "Caption": "右"
             }
         },
+        "UpdateCheckForm": {
+            "Caption": "更新を確認",
+            "Checking": {
+                "Caption": "更新を確認中…"
+            },
+            "Subscribe": {
+                "Caption": "更新を購読する"
+            },
+            "NoUpdate": {
+                "Caption": "最新版を使用中です"
+            }
+        },
         "ColourForm": {
             "Caption": "カラーオプション",
             "Preset": {
@@ -2951,7 +3005,8 @@
                     "軸グリッド",
                     "グリッド番号",
                     "キューポイントライン",
-                    "カスタムグリッド"
+                    "カスタムグリッド",
+                    "キューポイントデフォルト"
                 ]
             },
             "ItemLabel": {
@@ -3083,6 +3138,9 @@
                 },
                 "Start": {
                     "Hint": "選択マーカー"
+                },
+                "CuePoint": {
+                    "Hint": "キューポイントデフォルト"
                 }
             },
             "All": {
@@ -3268,7 +3326,8 @@
                     "Hint": "選択したキューポイントまで表示をスクロールします"
                 },
                 "Cull": {
-                    "Caption": "間引き"
+                    "Caption": "間引き",
+                    "Hint": "重複したキューポイントを削除"
                 }
             },
             "OpenCue": {
@@ -3364,6 +3423,15 @@
                 "Train": {
                     "Caption": "トレーニング..."
                 }
+            }
+        },
+        "LanguageDownloadForm": {
+            "Caption": "言語",
+            "ButtonOk": {
+                "Caption": "ダウンロード"
+            },
+            "SelectHelp": {
+                "Caption": "ダウンロードする言語を選択してください"
             }
         },
         "EffectWrapper": {
@@ -3646,6 +3714,52 @@
                 "Caption": "状態"
             }
         },
+        "InfinityLinkForm": {
+            "Caption": "Infinity Link",
+            "Link": {
+                "SendButton": {
+                    "Caption": "ファイルを送る…"
+                },
+                "ReceivePrompt": {
+                    "Caption": "受信フォルダ:"
+                },
+                "AllowOverwrite": {
+                    "Caption": "受信するファイルの上書きを許可する"
+                },
+                "OpenReceived": {
+                    "Caption": "受信したファイルを開く"
+                }
+            },
+            "Status": {
+                "PortUnavailable": {
+                    "Caption": "使用できるネットワークポートがありません。"
+                },
+                "Handshake": {
+                    "Caption": "WebSocketの接続を確立できませんでした。"
+                },
+                "Exception": {
+                    "Caption": "例外が発生しました。"
+                },
+                "Connected": {
+                    "Caption": "接続は有効です。"
+                },
+                "Unconnected": {
+                    "Caption": "接続がありません。GoldWave InfinityのFile→GoldWave Linkを使用してください。"
+                },
+                "LinkCode": {
+                    "Caption": "1234-5678"
+                },
+                "VersionError": {
+                    "Caption": "バージョンが一致しません。最新版のGoldWaveとInfinityがインストールされていることを確認してください。"
+                },
+                "SendCancelled": {
+                    "Caption": "送信がキャンセルされました。"
+                },
+                "Info": {
+                    "Caption": "リンクはローカルネットワーク(192.168)かつ、同じルーターに接続されている場合にしか機能しません。ファイアウォールでGoldWaveの接続が許可されている必要があります。"
+                }
+            }
+        },
         "InformationForm": {
             "Caption": "ファイル情報",
             "Art": {
@@ -3662,7 +3776,6 @@
                 "Caption": "トラック番号："
             },
             "GWText_URL": {
-                "Hint": "アートワークを削除します",
                 "TextHint": "https://..."
             },
             "URLLabel": {
@@ -3963,7 +4076,9 @@
                     "88200",
                     "96000",
                     "192000",
-                    "352800"
+                    "352800",
+                    "384000",
+                    "768000"
                 ],
                 "Text": "44100"
             },
@@ -4024,6 +4139,47 @@
                 "Caption": "ミックスが始まる時間："
             }
         },
+        "MultiRecorderForm": {
+            "Caption": "マルチデバイスレコーダー",
+            "ButtonCancel": {
+                "Caption": "閉じる(&C)"
+            },
+            "List": {
+                "Header": {
+                    "Sections": {
+                        "0": {
+                            "Text": "デバイス"
+                        },
+                        "1": {
+                            "Text": "音声出力ウインドウ"
+                        },
+                        "2": {
+                            "Text": "出力チャンネル"
+                        },
+                        "3": {
+                            "Text": "音量"
+                        },
+                        "4": {
+                            "Text": "音レベル"
+                        }
+                    }
+                },
+                "AddDevice": {
+                    "Caption": "デバイス追加(&A)"
+                }
+            },
+            "Start": {
+                "Hint": "録音開始",
+                "Caption": "開始(&R)"
+            },
+            "Elapsed": {
+                "Caption": "00:00:00.0"
+            },
+            "Stop": {
+                "Hint": "録音を開始",
+                "Caption": "停止(&S)"
+            }
+        },
         "NewSoundForm": {
             "Caption": "新しい音声",
             "SettingsBox": {
@@ -4071,7 +4227,9 @@
                         "88200",
                         "96000",
                         "192000",
-                        "352800"
+                        "352800",
+                        "384000",
+                        "768000"
                     ],
                     "Text": "48000"
                 },
@@ -4168,6 +4326,14 @@
                                 "Caption": "属性"
                             }
                         }
+                    },
+                    "UndetectablePanel": {
+                        "Add": {
+                            "Caption": "追加…"
+                        },
+                        "Remove": {
+                            "Caption": "削除"
+                        }
                     }
                 },
                 "Precedence": {
@@ -4180,6 +4346,14 @@
                             "1": {
                                 "Caption": "タイプ"
                             }
+                        }
+                    },
+                    "PrecedencePanel": {
+                        "MoveDown": {
+                            "Caption": "低"
+                        },
+                        "MoveUp": {
+                            "Caption": "高"
                         }
                     }
                 },
@@ -4224,6 +4398,9 @@
             "Caption": "言語選択",
             "LanguageLabel": {
                 "Caption": "有効な言語："
+            },
+            "Download": {
+                "Caption": "ダウンロード…"
             },
             "Open": {
                 "Caption": "開く..."
@@ -4369,7 +4546,9 @@
                     "88200",
                     "96000",
                     "192000",
-                    "352800"
+                    "352800",
+                    "384000",
+                    "768000"
                 ],
                 "Text": "0"
             },
@@ -4473,7 +4652,9 @@
                     "88200",
                     "96000",
                     "192000",
-                    "352800"
+                    "352800",
+                    "384000",
+                    "768000"
                 ],
                 "Text": "44100"
             },
@@ -4526,6 +4707,17 @@
             "Continue": {
                 "Hint": "続ける",
                 "Caption": "続ける"
+            },
+            "Message": {
+                "Lines.Strings": [
+                    "GoldWaveをお試しいただきありがとうございました！ 試用期間は終了しました。 継続して使用される場合はライセンスをご購入ください。",
+                    "ご購入されると以下をご利用になれます。",
+                    "・無制限の保存",
+                    "・無料の更新",
+                    "・Windows、Android、iOS、MacOS、Linuxなど、広く使用されているOSで使用可能",
+                    "",
+                    "一か月のフリートライアルのライセンスをリクエストしていただき、無制限の保存をご利用になることも可能です。"
+                ]
             },
             "Purchase": {
                 "Caption": "オンラインで購入する"
@@ -4774,6 +4966,11 @@
                 }
             }
         },
+        "SplashForm": {
+            "Celebrating": {
+                "Caption": "30周年!"
+            }
+        },
         "SplitFileForm": {
             "Caption": "ファイル分割",
             "Format": {
@@ -4984,6 +5181,20 @@
                         },
                         "MainCurrentLabel": {
                             "Caption": "現在のメインツールバーボタン："
+                        },
+                        "FromBar": {
+                            "Columns": {
+                                "0": {
+                                    "Caption": "使用できるツールバーボタン:"
+                                }
+                            }
+                        },
+                        "ToBar": {
+                            "Columns": {
+                                "0": {
+                                    "Caption": "現在のツールバーボタン:"
+                                }
+                            }
                         }
                     },
                     "MainConfig": {
@@ -5004,6 +5215,20 @@
                         },
                         "MainCurrentLabel": {
                             "Caption": "現在のエフェクトツールバーボタン："
+                        },
+                        "FromBar": {
+                            "Columns": {
+                                "0": {
+                                    "Caption": "使用できるツールバーボタン:"
+                                }
+                            }
+                        },
+                        "ToBar": {
+                            "Columns": {
+                                "0": {
+                                    "Caption": "現在のツールバーボタン:"
+                                }
+                            }
                         }
                     },
                     "EffectConfig": {
@@ -5120,6 +5345,19 @@
                 },
                 "YLabel": {
                     "Caption": "Y："
+                },
+                "YAxis2": {
+                    "Text": "オフ",
+                    "Items.Strings": [
+                        "オフ",
+                        "正規化 (-1.0から1.0)",
+                        "符号あり16ビット (-32768から32767)",
+                        "符号なし8ビット (0から255)",
+                        "dB"
+                    ]
+                },
+                "YLabel2": {
+                    "Caption": "Y2:"
                 }
             },
             "GridGroup": {
@@ -5177,6 +5415,12 @@
                 },
                 "UndoRetainView": {
                     "Caption": "元に戻すを使用するときに現在の表示やズームを保持"
+                },
+                "ShowPlaybackIndicator": {
+                    "Caption": "再生インジケーターを表示 > タイトル"
+                },
+                "HideDragIcons": {
+                    "Caption": "ドラッグ・ドロップ選択アイコンを隠す"
                 }
             },
             "Mouse": {
@@ -5324,22 +5568,28 @@
         },
         "ArrangerFrame": {
             "MainAvailableLabel": {
-                "Caption": "利用可能なツールバーボタン："
+                "Caption": "使用できるツールバーボタン:"
             },
             "MainCurrentLabel": {
-                "Caption": "現在のツールバーボタン："
+                "Caption": "現在のツールバーボタン:"
+            },
+            "AddButton": {
+                "Caption": "追加"
+            },
+            "RemoveButton": {
+                "Caption": "削除"
             },
             "FromBar": {
                 "Columns": {
                     "0": {
-                        "Caption": "利用可能なツールバーボタン："
+                        "Caption": "使用できるツールバーボタン:"
                     }
                 }
             },
             "ToBar": {
                 "Columns": {
                     "0": {
-                        "Caption": "現在のツールバーボタン："
+                        "Caption": "現在のツールバーボタン:"
                     }
                 }
             },
@@ -5401,7 +5651,9 @@
                         "88200 Hz",
                         "96000 Hz",
                         "192000 Hz",
-                        "352800 Hz"
+                        "352800 Hz",
+                        "384000 Hz",
+                        "768000 Hz"
                     ]
                 }
             },
@@ -5412,6 +5664,32 @@
                 "AttributesActionOK": {
                     "Caption": "OK"
                 }
+            }
+        },
+        "BlendFrame": {
+            "Duration": {
+                "Caption": "ブレンドの持続時間 (秒):"
+            },
+            "MarkerLabel": {
+                "Caption": "マーカー:"
+            },
+            "Markers": {
+                "Text": "開始 | マーカー",
+                "Items.Strings": [
+                    "開始 { マーカー",
+                    "停止 } マーカー",
+                    "両方のマーカー"
+                ]
+            },
+            "TypeLabel": {
+                "Caption": "フェード曲線:"
+            },
+            "FadeCurve": {
+                "Text": "等価音量",
+                "Items.Strings": [
+                    "リニアー",
+                    "等価音量"
+                ]
             }
         },
         "CrossfadeFrame": {
@@ -5546,6 +5824,20 @@
                 "Caption": "0"
             }
         },
+        "InstallWebViewFrame": {
+            "Wait": {
+                "Caption": "WebViewのインストールの完了を待機中…"
+            },
+            "DownloadCancel": {
+                "Caption": "キャンセル"
+            },
+            "Install": {
+                "Caption": "GoldWaveニュースフィードを見るために、ここをクリックしてMicrosoft WebViewのインストールをしてください。"
+            },
+            "Title": {
+                "Caption": "GoldWaveニュース"
+            }
+        },
         "ListButtons": {
             "ListButtonActions": {
                 "ListActionsRemove": {
@@ -5564,6 +5856,40 @@
                     "Caption": "下",
                     "Hint": "リストの下に移動"
                 }
+            }
+        },
+        "Multiband": {
+            "Band": {
+                "Knee": {
+                    "Caption": "二―ポイント (dB):"
+                },
+                "Attack": {
+                    "Caption": "アタック (秒):"
+                },
+                "Gain": {
+                    "Caption": "ゲイン:"
+                },
+                "Ratio": {
+                    "Caption": "比率:"
+                },
+                "Release": {
+                    "Caption": "リリース (秒):"
+                },
+                "Threshold": {
+                    "Caption": "しきい値 (dB):"
+                },
+                "Mode": {
+                    "Text": "コンプレッサー",
+                    "Items.Strings": [
+                        "コンプレッサー",
+                        "エキスパンダー",
+                        "リミター",
+                        "ゲート"
+                    ]
+                }
+            },
+            "Title": {
+                "Caption": "バンド"
             }
         },
         "PedalFrame": {
@@ -5590,6 +5916,12 @@
             }
         },
         "PreviewFrame": {
+            "PreviewPlay": {
+                "Caption": "プレビュー"
+            },
+            "PreviewStop": {
+                "Caption": "停止"
+            },
             "PreviewActionList": {
                 "PreviewAction": {
                     "Caption": "プレビュー",
@@ -5598,6 +5930,10 @@
                 "StopAction": {
                     "Caption": "停止",
                     "Hint": "プレビューを停止"
+                },
+                "PauseAction": {
+                    "Caption": "一時停止",
+                    "Hint": "プレビューを一時停止します"
                 }
             }
         },
@@ -5629,7 +5965,9 @@
                     "88200",
                     "96000",
                     "192000",
-                    "352800"
+                    "352800",
+                    "384000",
+                    "768000"
                 ],
                 "Text": "44100"
             },
@@ -5637,7 +5975,45 @@
                 "Caption": "カスタム..."
             }
         },
+        "RecorderFrame": {
+            "Volume": {
+                "Caption": "音量 (dB):"
+            },
+            "Device": {
+                "Hint": "録音デバイスを設定"
+            },
+            "OutChannel": {
+                "Hint": "録音した音声を保存するチャンネルを設定します",
+                "Text": "両チャンネル",
+                "Items.Strings": [
+                    "左",
+                    "右",
+                    "両チャンネル"
+                ]
+            },
+            "RemoveButton": {
+                "Hint": "録音デバイスを削除します",
+                "Caption": "削除ボタン"
+            },
+            "Message": {
+                "Hint": "Windowsのプライバシー設定を確認し、デバイスの電源がオンで準備ができていることを確認してください。",
+                "Caption": "エラー"
+            },
+            "OutSound": {
+                "Hint": "録音した音声が保存されるウインドウを設定"
+            }
+        },
         "SoundFrame": {
+            "Content": {
+                "Waveform": {
+                    "MoveSelection": {
+                        "Hint": "ドラッグ・ドロップ: 選択範囲をドラッグ"
+                    },
+                    "MoveSelectionContents": {
+                        "Hint": "ドラッグ・ドロップ: 選択範囲の内容をドラッグ"
+                    }
+                }
+            },
             "MenuWave": {
                 "MenuWaveSetStartMarker": {
                     "Caption": "開始マーカーを設定",
@@ -5765,6 +6141,14 @@
                 "EnterLicense": {
                     "Hint": "ライセンスを入力するためのウィンドウを表示します",
                     "Caption": "ライセンスを入力"
+                },
+                "BuyLicense": {
+                    "Hint": "ウェブサイトを表示",
+                    "Caption": "ライセンス購入"
+                },
+                "Subscribe": {
+                    "Hint": "更新や特別な割引などの通知に購読",
+                    "Caption": "購読(&S)"
                 }
             },
             "Toolbar": {
@@ -5781,6 +6165,11 @@
                 },
                 "MainToolBar": {
                     "Caption": "ファイル"
+                }
+            },
+            "NotificationPanel": {
+                "NotificationClose": {
+                    "Caption": "X"
                 }
             },
             "MainMenu": {
@@ -5846,6 +6235,9 @@
                 "ViewMenu": {
                     "Caption": "表示"
                 },
+                "ControlMenu": {
+                    "Caption": "コントロール(&C)"
+                },
                 "ToolMenu": {
                     "Caption": "ツール"
                 },
@@ -5878,6 +6270,118 @@
                 }
             },
             "ActionList": {
+                "ControlPlay1": {
+                    "Caption": "再生1",
+                    "Hint": "ボタン1の設定で再生"
+                },
+                "ControlPlay2": {
+                    "Caption": "再生2",
+                    "Hint": "ボタン2の設定で再生"
+                },
+                "ControlPlay3": {
+                    "Caption": "再生3",
+                    "Hint": "ボタン3の設定で再生"
+                },
+                "ControlPlayAll": {
+                    "Caption": "全体を再生",
+                    "Hint": "ファイルの全体を再生"
+                },
+                "ControlPlaySelection": {
+                    "Caption": "選択部分を再生",
+                    "Hint": "選択した部分を再生"
+                },
+                "ControlPlayUnselected": {
+                    "Caption": "未選択部分を再生",
+                    "Hint": "選択していない部分を再生"
+                },
+                "ControlPlayContinueToFinish": {
+                    "Caption": "停止マーカーまで続ける",
+                    "Hint": "停止マーカーまで再生を継続"
+                },
+                "ControlPlayContinueToEnd": {
+                    "Caption": "末尾まで続ける",
+                    "Hint": "ファイルの末尾まで再生を継続"
+                },
+                "ControlPlayView": {
+                    "Caption": "表示部分を再生",
+                    "Hint": "音声ウインドウに表示されている音声を再生"
+                },
+                "ControlPlayViewToEnd": {
+                    "Caption": "表示部分から末尾まで再生",
+                    "Hint": "音声ビューの左端からファイルの末尾まで再生"
+                },
+                "ControlPlayUpToStart": {
+                    "Caption": "開始マーカーまで再生",
+                    "Hint": "セクションから開始マーカーまで再生"
+                },
+                "ControlPlayUpToFinish": {
+                    "Caption": "停止マーカーまで再生",
+                    "Hint": "セクションから停止マーカーまで再生"
+                },
+                "ControlPlayFromFinish": {
+                    "Caption": "停止マーカーから再生",
+                    "Hint": "停止マーカから再生"
+                },
+                "ControlPlayIntroLoopEnd": {
+                    "Caption": "イントロ・ループ・エンドを再生",
+                    "Hint": "開始し、選択部分をループし、停止まで再生"
+                },
+                "ControlPlayLoopPoint": {
+                    "Caption": "ループポイントを再生",
+                    "Hint": "停止マーカーの手前で再生を開始し、開始までループ"
+                },
+                "ControlPlayStop": {
+                    "Caption": "再生停止",
+                    "Hint": "再生を停止"
+                },
+                "ControlPlayPause": {
+                    "Caption": "再生を一時停止",
+                    "Hint": "再生とビジュアルを一時停止"
+                },
+                "ControlPlayRewind": {
+                    "Caption": "巻き戻し",
+                    "Hint": "巻き戻し"
+                },
+                "ControlPlayFastForward": {
+                    "Caption": "早送り",
+                    "Hint": "早送り"
+                },
+                "ControlPlaySkipForward": {
+                    "Caption": "スキップ",
+                    "Hint": "再生カーソルを前方にスキップ"
+                },
+                "ControlPlaySkipBackward": {
+                    "Caption": "逆スキップ",
+                    "Hint": "再生カーソルを手前にスキップ"
+                },
+                "ControlRecordNew": {
+                    "Caption": "新規録音",
+                    "Hint": "新しいファイルで録音を開始"
+                },
+                "ControlRecordDictation": {
+                    "Caption": "ディクテーションを録音",
+                    "Hint": "ディクテーションモードで録音"
+                },
+                "ControlRecordSelection": {
+                    "Caption": "選択部分に録音",
+                    "Hint": "現在の選択部分に録音"
+                },
+                "ControlRecordPause": {
+                    "Caption": "録音を一時停止",
+                    "Hint": "録音を一時停止"
+                },
+                "ControlRecordStop": {
+                    "Caption": "録音を停止",
+                    "Hint": "録音を停止"
+                },
+                "ControlProperties": {
+                    "Caption": "プロパティ",
+                    "Hint": "コントロールに関するプロパティを設定"
+                },
+                "ControlUndock": {
+                    "Caption": "アンドック",
+                    "Hint": "コントロールウインドウを表示"
+                },
                 "FileRecentA": {
                     "Caption": "&A"
                 },
@@ -5890,25 +6394,8 @@
                 "FileRecentD": {
                     "Caption": "&D"
                 },
-                "OptionPluginEffect": {
-                    "Caption": "エフェクト",
-                    "Hint": "インストールされているエフェクトプラグインのメニューを表示します"
-                },
-                "OptionPluginFile": {
-                    "Caption": "ファイル",
-                    "Hint": "インストールされているファイルプラグインのメニューを表示します"
-                },
-                "OptionPluginVisual": {
-                    "Caption": "ビジュアル",
-                    "Hint": "インストールされているビジュアルプラグインのメニューを表示します"
-                },
                 "FileRecentE": {
                     "Caption": "&E"
-                },
-                "OptionApps": {
-                    "Caption": "アプリ...",
-                    "Hint": "アプリを設定、有効化、無効化する",
-                    "ToolCaption": "AppOp"
                 },
                 "FileRecentF": {
                     "Caption": "&F"
@@ -5955,6 +6442,23 @@
                 "FileRecentT": {
                     "Caption": "&T"
                 },
+                "OptionPluginEffect": {
+                    "Caption": "エフェクト",
+                    "Hint": "インストールされているエフェクトプラグインのメニューを表示します"
+                },
+                "OptionPluginFile": {
+                    "Caption": "ファイル",
+                    "Hint": "インストールされているファイルプラグインのメニューを表示します"
+                },
+                "OptionPluginVisual": {
+                    "Caption": "ビジュアル",
+                    "Hint": "インストールされているビジュアルプラグインのメニューを表示します"
+                },
+                "OptionApps": {
+                    "Caption": "アプリ...",
+                    "Hint": "アプリを設定、有効化、無効化する",
+                    "ToolCaption": "AppOp"
+                },
                 "ViewViewAll": {
                     "Caption": "全て表示",
                     "Hint": "全て表示|ファイル全体を表示するために縮小します",
@@ -5997,6 +6501,10 @@
                     "Caption": "情報...",
                     "Hint": "ファイル情報またはアートワークを設定します",
                     "ToolCaption": "情報"
+                },
+                "FileInfinityLink": {
+                    "Caption": "Infinity Link(&K)",
+                    "Hint": "GoldWave Infinityにリンクし、ファイルを転送"
                 },
                 "FileSave": {
                     "Caption": "保存",
@@ -6485,6 +6993,10 @@
                     "Caption": "マルチチャンネルミキサー",
                     "Hint": "マルチチャンネルミキサー：複数のチャンネルをミックスしたり、上下にミックスします。"
                 },
+                "EffectMultiband": {
+                    "Caption": "マルチバンドコンプレッサー…",
+                    "Hint": "マルチバンドコンプレッサー: 複数の周波数バンドに対して音声のダイナミクスを圧縮・拡張します"
+                },
                 "EffectOffset": {
                     "Caption": "オフセット...",
                     "Hint": "オフセット：DCオフセットを調整し、波形を上下させます。"
@@ -6656,6 +7168,11 @@
                     "Hint": "多数のファイルを1つにまとめます",
                     "ToolCaption": "結合"
                 },
+                "ToolMultiRecorder": {
+                    "Caption": "マルチデバイスレコーダー(&R)",
+                    "Hint": "複数の入力を同時に録音",
+                    "ToolCaption": "録音+"
+                },
                 "ToolSpeech": {
                     "Caption": "音声変換...",
                     "Hint": "テキストを音声に、または音声をテキストに変換します。",
@@ -6826,7 +7343,7 @@
                     "Hint": "再生を一時停止します"
                 },
                 "NavigationTogglePlay1": {
-                    "Caption": "プレイ1",
+                    "Caption": "再生1",
                     "Hint": "Play 1を使って再生を開始または停止します。"
                 },
                 "NavigationTogglePlay2": {
@@ -6943,6 +7460,14 @@
                 "ControlSpeedDown": {
                     "Caption": "減速",
                     "Hint": "再生速度を落とす"
+                },
+                "ToolbarLock": {
+                    "Caption": "ツールバーをロック",
+                    "Hint": "動かせないようにツールバーをロック"
+                },
+                "SoundWindow1": {
+                    "Caption": "音声1",
+                    "Hint": "音声ウインドウ1をアクティブ化"
                 }
             },
             "FileOpenDialog": {
@@ -7243,7 +7768,9 @@
                     "純白",
                     "純シアン",
                     "離散的な虹",
-                    "青"
+                    "青",
+                    "ゴールド",
+                    "紫・赤"
                 ]
             }
         },
@@ -7260,6 +7787,31 @@
             },
             "DecayTime": {
                 "Caption": "減衰時間"
+            }
+        },
+        "RingPage": {
+            "Caption": "リング",
+            "AxisScale": {
+                "Caption": " Xスケール",
+                "Items.Strings": [
+                    "リニア",
+                    "対数"
+                ]
+            },
+            "Shape": {
+                "Caption": "シェープ",
+                "Items.Strings": [
+                    "円",
+                    "四角",
+                    "猫目",
+                    "リップ"
+                ]
+            },
+            "SlowFade": {
+                "Caption": "スローフェード"
+            },
+            "Expand": {
+                "Caption": "拡張"
             }
         },
         "ChannelSeparationPage": {
@@ -7321,6 +7873,9 @@
             },
             "Clear": {
                 "Caption": "再生時にクリア"
+            },
+            "Logarithmic": {
+                "Caption": "対数"
             }
         },
         "SpectrumPage": {
@@ -7428,6 +7983,27 @@
             },
             "DL": {
                 "Caption": "表示："
+            }
+        },
+        "StripePage": {
+            "Caption": "ストライプ",
+            "Bands": {
+                "Text": "10バンド",
+                "Items.Strings": [
+                    "5バンド",
+                    "10バンド",
+                    "20バンド",
+                    "30バンド",
+                    "100バンド"
+                ]
+            },
+            "Layer": {
+                "Caption": "レイヤー",
+                "Items.Strings": [
+                    "周波数",
+                    "振幅",
+                    "両方"
+                ]
             }
         },
         "TonePage": {
@@ -7685,6 +8261,8 @@
         "sBandInitialRangeNarrow": "初期周波数範囲が狭すぎます。|'To'は 'From'よりも10Hz大きくなければなりません。",
         "sBandFinalRangeNarrow": "最終的な周波数範囲が狭すぎます。|'To'は 'From'よりも10Hz大きくなければなりません。",
         "sSimilarityRangeBad": "類似性アルゴリズムを使用する場合、検索範囲の値はウィンドウサイズより小さくなければなりません。",
+        "sTempoRangeBad": "テンポの変更可能な範囲を超過しています (25%から400%)。",
+        "sAmplitudeScanFail": "スキャンに失敗しました。",
         "sOff": "オフ",
         "sSeparator": "セパレータ",
         "sUntitled": "無題",
@@ -7759,6 +8337,7 @@
         "segNoCueInFile": "キューを別のファイルにエクスポートしますか？|キューポイントをこのファイル形式で保存することはできません。|現在のインポート/エクスポート設定を変更するには、[オプション]メニューの[ストレージ]コマンドを使用します。",
         "segUseReader": "CDからオーディオを読み取るには、CDリ​​ーダーツールを使用する必要があります。",
         "segEncoderDownloadFail": "エンコーダをダウンロードできませんでした。|手動でエンコーダをインストールする方法についてはヘルプを選択してください。",
+        "segDownloadFail": "ダウンロードに失敗しました。ネットワークやファイアウォールを確認してください。",
         "segStopRecording": "録音はまだ進行中です。 今すぐ録音を停止しますか？",
         "segNewFileTooLarge": "このファイル用のストレージは4GBを超える可能性があります。 Windowsのバージョンによっては、ファイル全体をディスクに保存できません。",
         "segEffectException": "エフェクトプラグインで例外が発生しました。|プラグイン開発者に連絡して問題を解決するか、GoldWaveのヘルプインデックスの「設定」を参照してください。",
@@ -7773,8 +8352,10 @@
         "segRestoreError": "GoldWaveバックアップファイルから設定を復元できませんでした。",
         "segRegistryAdminError": "Windowsレジストリを更新できませんでした。 管理者権限が必要です。",
         "segNetworkPortsUnavailable": "リモートApp接続に使用できるネットワークポートはありません。 アプリを無効にするには、[オプション]メニューの[アプリ]を使用します。",
+        "segNetorkAccessRequired": "この機能はネットワークアクセスが必要です。|GoldWaveのブロックを解除するか、ファイアウォール越しにGoldWaveのアクセスを許可する必要があります。",
         "segHelpNotFound": "ヘルプトピックが見つかりません：\r\n",
         "segRecoverFiles": "%0%のファイルを前回のセッションから復元しますか？",
+        "segFloatingPointError": "浮動小数点の計算のエラーが発生しました。|GoldWaveセットアップをWindowsのスタートメニューより実行し「Ignore floating point errors」を有効にしてください。",
         "spmRecordPermission": "音声の録音に必要な許可が取得できませんでした。アプリケーションの許可設定を変更してください。",
         "sSplitFileNotEnoughHashes": "ファイル名テンプレートには、ファイル内のキューポイント数を考慮して、少なくとも%0%以上の「＃」記号を含める必要があります。",
         "sSplitFileTooManyHashes": "ファイル名テンプレートに含まれている '＃'記号が多すぎます。",
@@ -7814,6 +8395,7 @@
         "sKeyboardDefaults": "すべてのキーボード割り当てをデフォルトにリセットしますか？",
         "sKeyboardRestart": "GoldWaveを再起動して元のキーボード割り当てをロードします。",
         "sChainUnsaved": "現在のチェーンは保存されていないため破棄されます。|チェーンを保存するには、「キャンセル」を選択してからプリセットの名前を入力し、「プリセットを追加[+]」ボタンをクリックします。",
+        "sChainCloseEffect": "エフェクトを削除する前に、エフェクトの設定ウインドウを閉じてください。",
         "sChainRemoveAll": "現在のチェーンを破棄しますか？",
         "sChainDiscardButton": "チェーンを破棄",
         "sChainEffect": "エフェクトチェーン",
@@ -7835,6 +8417,8 @@
         "sBatchEditIncompatible": "プリセット「%0%」の編集コマンドが読めないか、このバージョンと互換性がありません。",
         "sBatchEditNoChannelsSelected": "チャンネルが選択されないため、チャンネル選択は変更できません。",
         "sBatchEditNotAllChannelsSelected": "指定されたチャンネル選択に対してすべてのチャンネルを選択することはできません。",
+        "sBatchDoubleRateConversion": "サンプリングレートの変換を%0%から%1%まで%2%行います。",
+        "sBatchRateNotCompatible": "最終的なサンプリングレートがオリジナルのものと一致しません。変換タブからファイル変換を有効にし、新しいサンプリングレートが使用できるようにしてください。",
         "sBatchStep": "ステップ%0%",
         "sBatchFolderList": "フォルダ一覧",
         "sBatchNoFiles": "ファイルが見つかりません。",
@@ -7889,6 +8473,7 @@
         "sregEvaluationExpired": "評価期間が終了しました！",
         "sregEvaluationExpiring": "評価期間はもうすぐ切れます！",
         "sregEvaluationUnlicensed": "ライセンスがないバージョン。",
+        "sregEvaluationSaves": "残りの保存回数: %0%。無制限の保存にはライセンスが必要です。",
         "sregLicenseBarClickHere": " ライセンスを購入するには、ここをクリックしてください。",
         "sregLicenseBarClickHereNew": " 新しいライセンスを購入するには、ここをクリックしてください。",
         "sregLicenseBarExpired": "あなたのライセンスは期限が切れました！",
@@ -7944,7 +8529,9 @@
             "チャンネル選択",
             "コメント",
             "クロスフェード",
-            "再生レート"
+            "再生レート",
+            "マーカーでブレンド",
+            "リサンプル"
         ],
         "sBatchTrimSilenceSetting": [
             "先頭",
@@ -8157,7 +8744,8 @@
             "エラー",
             "情報",
             "セキュリティ"
-        ]
+        ],
+        "sVisualSpectrumRangeError": "範囲は100Hzより大きく、かつ下限が上限よりも小さい必要があります。"
     },
     "Effect": {
         "Auto Gain": "自動ゲイン",
@@ -8175,8 +8763,11 @@
         "Invert": "位相反転",
         "Mechanize": "メカナイズ",
         "MaxMatch": "マックスマッチ",
+        "Multiband Compressor": "マルチバンドコンプレッサー",
         "Offset": "オフセット",
         "Pitch": "ピッチ",
+        "Playback Rate": "再生レート",
+        "Resample": "リサンプル",
         "Reverb": "リバーブ",
         "Reverse": "反転",
         "Time": "時間",
@@ -8223,7 +8814,18 @@
         "Waveform": "波形",
         "X-Y Graph": "XYグラフ",
         "LED Time": "LED時間表示",
-        "Channel Separation": "チャンネル分離"
+        "Channel Separation": "チャンネル分離",
+        "Ring": "リング",
+        "Stripe": "ストライプ",
+        "Media Player Visualizations": "メディアプレイヤービジュアル",
+        "BPM Counter": "BPMカウンター"
+    },
+    "Category": {
+        "Edit": "編集",
+        "Edit Trim": "トリムを編集",
+        "Edit Channel": "チャンネルを編集",
+        "Edit Selection": "選択範囲を編集",
+        "Edit Cue Point": "キューポイントを編集"
     },
     "Audio": {
         "Wave": "Wave",
@@ -8242,7 +8844,12 @@
         "MP3": "MP3",
         "DirectShow": "DirectShow",
         "Media Foundation": "Media Foundation",
-        "Extended Audio": "拡張オーディオ"
+        "Extended Audio": "拡張オーディオ",
+        "Windows Media Audio": "Windows Media Audio",
+        "FLAC: Lossless Codec": "FLAC: 可逆化Codec",
+        "Monkey's Audio": "Monkey's Audio",
+        "Ogg Vorbis": "Ogg Vorbis",
+        "Opus": "Opus"
     },
     "Preset": {
         "Maximize voice with high noise": "ボイスを高いノイズで最大化",
@@ -8411,6 +9018,8 @@
         "Very light hiss/rumble removal": "非常に軽いヒス音・轟音削除",
         "Output initial noise": "初期ノイズ出力",
         "Frequency peak limiter, -60dB": "周波数ピークリミター・-60dB",
+        "Noise floor at -80dB": "-80dBのノイズフロア",
+        "Noise floor at -70dB": "-70dBのノイズフロア",
         "Shift down": "シフトダウン",
         "Shift up": "シフトアップ",
         "Go to left": "左に移動",
@@ -8530,6 +9139,16 @@
         "Average online music": "平均的なオンラインミュージック",
         "Loud (modern compressed)": "大きい（モダンな圧縮）",
         "Classical": "クラシック",
+        "2:1 at -30dB, hard knee": "-30dBにて2:1、ハード二―ポイント",
+        "2:1 at -30dB, soft knee": "-30dBにて2:1、ソフト二―ポイント",
+        "Sibilance reduction": "歯擦音低減",
+        "De-esser, wide reduction": "エス音軽減、ワイドな低減",
+        "Low end 200Hz gate": "ローエンド200Hzゲート",
+        "High end 10000Hz gate": "ハイエンド10000Hzゲート",
+        "Raise quiet vocals": "静かなボーカルを増強",
+        "Low end 200Hz limiter": "ローエンド200Hzリミター",
+        "High end 6000Hz limiter": "ハイエンド6000Hzリミター",
+        "Breath filter": "呼吸音フィルター",
         "Echos and bass boosted": "エコーと低音を増幅",
         "Multiflanger": "マルチフランジャー",
         "Similarity pitch down": "類似性のピッチダウン",
@@ -8624,6 +9243,28 @@
         "Sweep full range": "スイープ・フルレンジ",
         "Sweep to f Hz": "スイープ・f Hzまで",
         "Triangle, f = Hz": "三角波・f = Hz",
-        "Metronome, f = BPS, x = Bar": "メトロノーム・f = BPS・x = バー"
+        "Metronome, f = BPS, x = Bar": "メトロノーム・f = BPS・x = バー",
+        "Wave": "ウェーブ",
+        "Telephone, u-Law": "電話、u-Law",
+        "Telephone, A-Law": "電話、A-Law",
+        "CD quality": "CD音質",
+        "Mono, 16 Bit": "モノラル、16ビット",
+        "MP3": "MP3",
+        "Standard quality": "通常音質",
+        "High quality": "高音質",
+        "FLAC: Lossless Codec": "FLAC: 可逆化Codec",
+        "Lossless 16 bit stereo": "可逆化16ビットステレオ",
+        "Lossless 24 bit stereo": "可逆化24ビットステレオ",
+        "Media Foundation": "Media Foundation",
+        "High quality stereo": "高音質ステレオ",
+        "Standard quality stereo": "通常音質ステレオ",
+        "Mark 1 second silences (34dB) between songs": "音声の間に1秒の無音(34dB)のマークを入れる",
+        "Set cue points at 1 minute intervals": "キューポイントを1分ごとに入れる",
+        "Mark all 1 second silences (40dB)": "全ての1秒の無音(40dB)をマークする",
+        "Peak at -1dB": "-1dBでピーク",
+        "\"goldwave\" search": "goldwave検索",
+        "Leave 1 second at 40db": "40dBで1秒間保持",
+        "Trim all silence at -30dB": "-30dB以下の無音をトリム",
+        "Leave 1 second at -40db, trailing": "-40dBで1秒間保持、最後尾"
     }
 }
